@@ -16,4 +16,3 @@
 | 特征层 | Amount/Time 标准化 | 合规要求“不可解释特征”显式声明 | 其他28维特征保持原样 |
 | 样本层 | SMOTE + 严格 train/test split | 杜绝数据泄露 | 仅在训练集内过采样 |
 | 模型层 | Logistic Regression, Random Forest, SVM | 稳健可解释 | 5折分层交叉验证，Random Forest AUC=0.98, Recall=0.82 |
-| 部署层 | joblib + Docker | 生产环境即用 | `joblib.load('models/rf.pkl')` 即可调用 |
