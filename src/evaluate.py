@@ -21,7 +21,6 @@ def plot_roc_curve(y_true, y_proba, model_name: str = ""):
     plt.legend(loc="lower right")
     plt.grid(alpha=0.3)
     plt.tight_layout()
-    plt.show()
 
     return roc_auc
 
@@ -40,7 +39,6 @@ def plot_pr_curve(y_true, y_proba, model_name: str = ""):
     plt.legend(loc="upper left")
     plt.grid(alpha=0.3)
     plt.tight_layout()
-    plt.show()
 
     return avg_prec
 
@@ -55,7 +53,6 @@ def plot_confusion(y_true, y_pred, normalize: bool = True):
     disp.plot(cmap="Blues", values_format=".0f" if not normalize else ".2f")
     plt.title("Confusion Matrix")
     plt.tight_layout()
-    plt.show()
 
 
 def print_classification_report(y_true, y_pred):
